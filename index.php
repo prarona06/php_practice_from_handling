@@ -42,6 +42,13 @@
                   I agree to the terms and conditions
                 </label>
               </div>
+              <?php
+
+              if(isset($_GET['error']) && $_GET['error'] == 'Invalid Method!'){
+                echo "<p class='text-danger'> Invalid Request Method!</p>";
+              }
+              
+              ?>
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
               </div>
