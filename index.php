@@ -15,7 +15,7 @@
             <h3 class="mb-0">Sign Up</h3>
           </div>
           <div class="card-body p-4">
-            <form action="./core/signup_core.php" method="GET">
+            <form action="./core/signup_core.php" method="POST">
               <div class="mb-3">
                 <label for="name" class="form-label">Full Name</label>
                 <input type="text" name="fullname" class="form-control" id="name" placeholder="John Doe" >
@@ -44,9 +44,9 @@
               </div>
               <?php
 
-              if(isset($_GET['error']) && $_GET['error'] == 'Invalid Method!'){
+              /*if(isset($_GET['error']) && $_GET['error'] == 'Invalid Method!'){
                 echo "<p class='text-danger'> Invalid Request Method!</p>";
-              }
+              }*/
               
               ?>
               <div class="d-grid">
