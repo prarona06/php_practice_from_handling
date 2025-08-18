@@ -24,13 +24,22 @@ if($r_method !== 'POST'){
 exit;
 }
     
+/*eita Post variable er jonno....
+
 
 $fname =$_POST['fullname'];
 $email =$_POST['fullemail'];
 $password =$_POST['fullpassword'];
 $confirm =$_POST['fullconfirm'];
+*/
+
+// Request variable er jonno...
 
 
+$fname =$_REQUEST['fullname'];
+$email =$_REQUEST['fullemail'];
+$password =$_REQUEST['fullpassword'];
+$confirm =$_REQUEST['fullconfirm'];
 
 echo $fname . '<br>';
 echo $email . '<br>';
