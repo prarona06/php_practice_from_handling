@@ -38,10 +38,29 @@ $confirm =$_POST['fullconfirm'];
 
 $fname =$_REQUEST['fullname'];
 $email =$_REQUEST['fullemail'];
+$username=$_REQUEST['fullusername'];
 $password =$_REQUEST['fullpassword'];
 $confirm =$_REQUEST['fullconfirm'];
 
+if (empty($fname) || empty($email ) || empty($username) || empty($password) || empty($confirm) ){
+   
+   $erros = [
+     'name_required' => 'required',
+     'email_required' => 'required',
+     '$username_required' => 'required',
+     'password_required' => 'required',
+     'confirm_required' => 'required',
+   ];
+   
+   $qString = http_build_query($erros);
+   
+   
+    header('Location: ../index.php?'. $qString);
+   
+}
+
 echo $fname . '<br>';
 echo $email . '<br>';
+echo $username . '<br>';
 echo $password . '<br>';
 echo $confirm . '<br>';

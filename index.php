@@ -18,23 +18,54 @@
             <form action="./core/signup_core.php" method="post">
               <div class="mb-3">
                 <label for="name" class="form-label">Full Name</label>
+                
                 <input type="text" name="fullname" class="form-control" id="name" placeholder="John Doe" >
+             <?php
+if(isset($_GET['name_required']) && $_GET['name_required'] == 'required'){
+  echo "<p class='text-danger'>Full name is required!</p>";
+}
+
+             ?>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email"  name="fullemail" class="form-control" id="email" placeholder="you@example.com" >
+                 <?php
+if(isset($_GET['email_required']) && $_GET['email_required'] == 'required'){
+  echo "<p class='text-danger'>Email is required!</p>";
+}
+
+             ?>
               </div>
               <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text"  name="fullusername" class="form-control" id="username" placeholder="Choose a username" >
+                 <?php
+if(isset($_GET['username_required']) && $_GET['username_required'] == 'required'){
+  echo "<p class='text-danger'>Username is required!</p>";
+}
+
+             ?>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="fullpassword" class="form-control" id="password" placeholder="********" >
+                 <?php
+if(isset($_GET['password_required']) && $_GET['password_required'] == 'required'){
+  echo "<p class='text-danger'>Password is required!</p>";
+}
+
+             ?>
               </div>
               <div class="mb-3">
                 <label for="confirm" class="form-label">Confirm Password</label>
                 <input type="password"  name="fullconfirm" class="form-control" id="confirm" placeholder="********" >
+                 <?php
+if(isset($_GET['confirm_required']) && $_GET['confirm_required'] == 'required'){
+  echo "<p class='text-danger'>Confirm Password is required!</p>";
+}
+
+             ?>
               </div>
               <div class="form-check mb-3">
                 <input class="form-check-input" name="fulterms" type="checkbox" id="terms" >
